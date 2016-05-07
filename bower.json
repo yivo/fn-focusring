@@ -1,6 +1,5 @@
 {
   "name": "fn-focusring",
-  "version": "1.0.0",
   "homepage": "https://github.com/yivo/fn-focusring",
   "authors": [
     "Yaroslav Konoplov <yaroslav@inbox.com>"
@@ -15,6 +14,7 @@
     "tests",
     "spec",
     "coffeespec",
-    "gulpfile.*"
+    "gulpfile.*",
+    "demo.gif"
   ]
 }
