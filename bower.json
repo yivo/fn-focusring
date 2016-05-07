@@ -1,0 +1,20 @@
+{
+  "name": "fn-focusring",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yivo/fn-focusring",
+  "authors": [
+    "Yaroslav Konoplov <yaroslav@inbox.com>"
+  ],
+  "description": "Beautiful focus effect",
+  "main": "_fn-focusring.sass",
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "spec",
+    "coffeespec",
+    "gulpfile.*"
+  ]
+}

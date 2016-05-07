@@ -1,0 +1,33 @@
+.fn-focusring
+  position: relative
+  &:after
+    content: ''
+    display: none
+    position: absolute
+    top:    nth($fn-focusring-geometry-final, 1)
+    right:  nth($fn-focusring-geometry-final, 2)
+    bottom: nth($fn-focusring-geometry-final, 3)
+    left:   nth($fn-focusring-geometry-final, 4)
+    border: $fn-focusring-border
+    +border-radius($fn-focusring-border-radius)
+    +animation-name($fn-focusring-animation-name)
+    +animation-duration($fn-focusring-animation-duration)
+    +animation-timing-function(ease-out)
+  &.target-focused
+    .fn-focusring-target
+      border-color: transparent
+    &:after
+      +inline-block
+  +keyframes(fn-focusring-animation)
+    0%
+      top:    nth($fn-focusring-geometry-initial, 1)
+      right:  nth($fn-focusring-geometry-initial, 2)
+      bottom: nth($fn-focusring-geometry-initial, 3)
+      left:   nth($fn-focusring-geometry-initial, 4)
+      +opacity(0)
+    100%
+      top:    nth($fn-focusring-geometry-final, 1)
+      right:  nth($fn-focusring-geometry-final, 2)
+      bottom: nth($fn-focusring-geometry-final, 3)
+      left:   nth($fn-focusring-geometry-final, 4)
+      +opacity(1)
