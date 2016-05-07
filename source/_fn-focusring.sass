@@ -13,7 +13,7 @@
     +animation-name($fn-focusring-animation-name)
     +animation-duration($fn-focusring-animation-duration)
     +animation-timing-function(ease-out)
-    
+
   &.target-focused:after
     +inline-block
 
@@ -24,7 +24,10 @@
     +inline-block
 
   &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
-    border-color: transparent
+    @if $fn-focusring-border-color-opacity > 0.0
+      border-color: transparentize($fn-focusring-border-color, 0.99)
+    @else
+      border-color: transparent
 
   +keyframes(fn-focusring-animation)
     0%
