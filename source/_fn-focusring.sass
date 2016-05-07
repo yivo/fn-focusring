@@ -25,9 +25,9 @@
 
   &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
     @if $fn-focusring-border-color-opacity > 0.0
-      border-color: transparentize($fn-focusring-border-color, 0.99)
+      border-color: transparentize($fn-focusring-border-color, 0.99) !important
     @else
-      border-color: transparent
+      border-color: transparent !important
 
   +keyframes(fn-focusring-animation)
     0%
