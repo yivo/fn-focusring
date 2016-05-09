@@ -1,6 +1,6 @@
 .fn-focusring
   position: relative
-  &:after
+  &:before
     content: ''
     display: none
     position: absolute
@@ -14,13 +14,19 @@
     +animation-duration($fn-focusring-animation-duration)
     +animation-timing-function(ease-out)
 
-  &.target-focused:after
+  &:before, > .fn-focusring-target
+    z-index: 1
+
+  > .fn-focusring-target
+    position: relative
+
+  &.target-focused:before
     +inline-block
 
   // CSS4 :has selector: http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector
-  // For unknown reasons doesn't work together with &.target-focused:after...
+  // For unknown reasons doesn't work together with &.target-focused:before...
   // So this selector is extracted.
-  &:has(> .fn-focusring-target:focus):after
+  &:has(> .fn-focusring-target:focus):before
     +inline-block
 
   &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
