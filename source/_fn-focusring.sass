@@ -1,6 +1,6 @@
 .fn-focusring
   position: relative
-  &:before
+  &:after
     content: ''
     display: none
     position: absolute
@@ -9,6 +9,7 @@
     bottom: nth($fn-focusring-geometry-final, 3)
     left:   nth($fn-focusring-geometry-final, 4)
     border: $fn-focusring-border
+    pointer-events: none
     +border-radius($fn-focusring-border-radius)
     +animation-name($fn-focusring-animation-name)
     +animation-duration($fn-focusring-animation-duration)
@@ -16,26 +17,26 @@
     +transform(translate3d(0, 0, 0))
     +backface-visibility(hidden)
 
-  &:before, > .fn-focusring-target
+  &:after, > .fn-focusring-target
     z-index: 1
 
   > .fn-focusring-target
     position: relative
 
-  &.target-focused:before
+  &.target-focused:after
     +inline-block
 
   // CSS4 :has selector: http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector
-  // For unknown reasons doesn't work together with &.target-focused:before...
+  // For unknown reasons doesn't work together with &.target-focused:after...
   // So this selector is extracted.
-  &:has(> .fn-focusring-target:focus):before
+  &:has(> .fn-focusring-target:focus):after
     +inline-block
 
   &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
-    @if $fn-focusring-border-color-opacity > 0.0
-      border-color: transparentize($fn-focusring-border-color, 0.99) !important
-    @else
-      border-color: transparent !important
+    //@if $fn-focusring-border-color-opacity > 0.0
+    //  border-color: transparentize($fn-focusring-border-color, 0.99) !important
+    //@else
+    border-color: transparent !important
 
   +keyframes(fn-focusring-animation)
     0%
