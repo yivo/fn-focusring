@@ -29,8 +29,9 @@
   // CSS4 :has selector: http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector
   // For unknown reasons doesn't work together with &.target-focused:after...
   // So this selector is extracted.
-  &:has(> .fn-focusring-target:focus):after
-    +inline-block
+  @if $fn-focusring-css4
+    &:has(> .fn-focusring-target:focus):after
+      +inline-block
 
   &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
     border-color: transparent !important
