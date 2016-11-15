@@ -34,7 +34,7 @@
     &:has(> .fn-focusring-target:focus):after
       display: block
 
-  @unless $fn-focusring-transparentize-border
+  @if not $fn-focusring-transparentize-border
     &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
       border-color: transparent !important
 
