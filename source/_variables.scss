@@ -5,8 +5,10 @@ $fn-focusring-border:               3px solid
                                     opacify($fn-focusring-border-color,
                                             $fn-focusring-border-color-opacity) !default;
 
-$fn-focusring-animation-name:     fn-focusring-animation !default;
-$fn-focusring-animation-duration: 0.15s                  !default;
+$fn-focusring-animation-name:            fn-focusring-animation !default;
+$fn-focusring-animation-duration:        0.15s                  !default;
+$fn-focusring-animation-timing-function: ease-out               !default;
+
 
 $fn-focusring-geometry-initial:   -14px -14px -14px -14px !default;
 $fn-focusring-geometry-final:     -2px -2px -2px -2px     !default;
