@@ -34,8 +34,9 @@
     &:has(> .fn-focusring-target:focus):after
       display: block
 
-  &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
-    border-color: transparent !important
+  @unless $fn-focusring-transparentize-border
+    &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
+      border-color: transparent !important
 
   +keyframes(fn-focusring-animation)
     0%
