@@ -18,24 +18,24 @@
     +animation-duration($fn-focusring-animation-duration)
     +animation-timing-function($fn-focusring-animation-timing-function)
 
-  &:after, > .fn-focusring-target
+  &:after, > &-target
     z-index: 1
 
-  > .fn-focusring-target
+  > &-target
     position: relative
 
-  &.target-focused:after
+  &.focus:after
     display: block
 
   // CSS4 :has selector: http://stackoverflow.com/questions/1014861/is-there-a-css-parent-selector
   // For unknown reasons doesn't work together with &.target-focused:after...
   // So this selector is extracted.
   @if $fn-focusring-css4
-    &:has(> .fn-focusring-target:focus):after
+    &:has(> &-target:focus):after
       display: block
 
-  @if not $fn-focusring-transparentize-border
-    &.target-focused > .fn-focusring-target, > .fn-focusring-target:focus
+  @if $fn-focusring-transparentize-border
+    &.focus > &-target, > &-target:focus
       border-color: transparent !important
 
   +keyframes(fn-focusring-animation)

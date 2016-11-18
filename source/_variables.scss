@@ -1,9 +1,6 @@
-$fn-focusring-border-color:         #3BAFDA !default;
-$fn-focusring-border-color-opacity: 0.55    !default;
-$fn-focusring-border-radius:        6px     !default;
-$fn-focusring-border:               3px solid
-                                    opacify($fn-focusring-border-color,
-                                            $fn-focusring-border-color-opacity) !default;
+$fn-focusring-border-color:  transparentize(#3BAFDA, 0.4)         !default;
+$fn-focusring-border-radius: 6px                                  !default;
+$fn-focusring-border:        3px solid $fn-focusring-border-color !default;
 
 $fn-focusring-animation-name:            fn-focusring-animation !default;
 $fn-focusring-animation-duration:        0.15s                  !default;
