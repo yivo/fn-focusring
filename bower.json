@@ -1,20 +1,22 @@
 {
   "name": "fn-focusring",
-  "homepage": "https://github.com/yivo/fn-focusring",
-  "authors": [
-    "Yaroslav Konoplov <yaroslav@inbox.com>"
-  ],
   "description": "Beautiful focus effect",
-  "main": "_fn-focusring.sass",
+  "main": "fn-focusring.coffee",
+  "authors": [
+    "Yaroslav Konoplov <eahome00@gmail.com>"
+  ],
   "license": "MIT",
+  "keywords": [
+    "focus",
+    "jquery",
+    "effect"
+  ],
+  "homepage": "https://github.com/yivo/fn-focusring",
   "ignore": [
+    "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "spec",
-    "coffeespec",
-    "gulpfile.*",
-    "demo.gif"
+    "tests"
   ]
 }

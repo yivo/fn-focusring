@@ -1,0 +1,24 @@
+{
+  "name": "fn-focusring",
+  "version": "1.0.11",
+  "description": "Beautiful focus effect",
+  "main": "fn-focusring.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yivo/fn-focusring.git"
+  },
+  "keywords": [
+    "focus",
+    "jquery",
+    "effect"
+  ],
+  "author": "Yaroslav Konoplov <eahome00@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yivo/fn-focusring/issues"
+  },
+  "homepage": "https://github.com/yivo/fn-focusring#readme"
+}
