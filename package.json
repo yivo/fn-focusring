@@ -1,6 +1,6 @@
 {
   "name": "fn-focusring",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Beautiful focus effect",
   "main": "fn-focusring.coffee",
   "scripts": {
